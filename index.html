@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body><h1></h1>
+  
+</body>
+<script src="./algorithm.js"></script>
+<script>
+
+  
+//convertFahrToCelsius
+function convertFahrToCelsius(fehr) {
+    if (isNaN(fehr) && (typeof fehr !== 'string')) {
+        console.log(`${fehr} is not a valid number but a/an ${typeof fehr} type`)
+    } else {
+      return ((fehr - 32) * (5/9)).toFixed(4);
+    }
+    console.log(cel.toFixed(4))
+}
+console.log(convertFahrToCelsius(0));
+// checkYuGiOh
+function checkYuGiOh(n) {
+    const myArray = [];
+    for (let i = 1; i <= n; i++) {
+        if((i%2 === 0) && (i%3 === 0) && (i%5 === 0)) {
+            myArray.push("yu-gi-oh")
+        } else if((i%3 === 0) && (i%5 === 0)) {
+            myArray.push("gi-oh")
+        } else if((i%2 === 0) && (i%5 === 0)) {
+            myArray.push("yu-oh")
+        } else if((i%2 === 0) && (i%3 === 0)) {
+            myArray.push("yu-gi")
+        } else if (i%2 === 0) {
+            myArray.push("yu");
+        } else if (i%3 === 0) {
+            myArray.push("gi")
+        } else if (i%5 === 0) {
+            myArray.push("oh")
+        } else {myArray.push(i)}
+    }
+    return myArray;
+}
+console.log(checkYuGiOh(30))
+
+  
+  
+
+   
+
+</script>
+
+
+</html>
